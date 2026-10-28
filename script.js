@@ -19,7 +19,7 @@ function showInternships() {
         let statusCell = row.insertCell(3);
         let status = document.createElement("select");
 
-        let options = ["Pending", "Applied", "Selected"];
+        let options = ["Pending", "Applied", "Test Passed", "Waiting for Interview", "Selected"];
 
         for (let j = 0; j < options.length; j++) {
             let option = document.createElement("option");
@@ -37,6 +37,7 @@ function showInternships() {
 
         statusCell.appendChild(status);
     }
+    updateDashboard();
 }
 
 // Save internships in the browser
@@ -69,3 +70,37 @@ form.onsubmit = function (event) {
 };
 
 showInternships();
+
+
+function updateDashboard() {
+    document.getElementById("totalCount").textContent = internships.length;
+
+    let applied = 0;
+    let testsPassed = 0;
+    let interviews = 0;
+    let selected = 0;
+
+    for (let i = 0; i < internships.length; i++) {
+        if (internships[i].status === "Applied") {
+            applied++;
+        }
+
+        if (internships[i].status === "Test Passed") {
+            testsPassed++;
+        }
+
+        if (internships[i].status === "Waiting for Interview") {
+            interviews++;
+        }
+
+        if (internships[i].status === "Selected") {
+            selected++;
+        }
+    }
+
+    document.getElementById("appliedCount").textContent = applied;
+    document.getElementById("testPassedCount").textContent = testsPassed;
+    document.getElementById("interviewCount").textContent = interviews;
+    document.getElementById("selectedCount").textContent = selected;
+}
+

@@ -4,12 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillSprint - Internship Tracker</title>
+    <title>SkillSprint</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>Welcome to SkillSprint</h1>
-    <p>Organize internship opportunities and track job applications.</p>
+    <p>Track your internships and job applications.</p>
+
+    <h2>My Dashboard</h2>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total Internships</h3>
+            <p id="totalCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Applications Submitted</h3>
+            <p id="appliedCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Tests Passed</h3>
+            <p id="testPassedCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Waiting for Interview</h3>
+            <p id="interviewCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Selections</h3>
+            <p id="selectedCount">0</p>
+        </div>
+    </div>
 
     <h2>Add an Internship</h2>
 
@@ -21,7 +51,7 @@
         <input type="text" id="role" required>
 
         <label for="link">Application Link</label>
-        <input type="url" id="link" placeholder="https://example.com">
+        <input type="url" id="link">
 
         <label for="deadline">Application Deadline</label>
         <input type="date" id="deadline">

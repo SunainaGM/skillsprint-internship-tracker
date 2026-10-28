@@ -66,3 +66,31 @@ th {
     background-color: #2e5d45;
     color: white;
 }
+
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 180px;
+    border: 1px solid #dddddd;
+}
+
+.card h3 {
+    color: #2e5d45;
+    font-size: 16px;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: darkgreen;
+}
+
