@@ -1,14 +1,48 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SkillSprint</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSprint - Internship Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Welcome to SkillSprint</h1>
-    <p>I am building SkillSprint to organize internship opportunities and track my job applications.</p>
+    <p>Organize internship opportunities and track job applications.</p>
+
+    <h2>Add an Internship</h2>
+
+    <form id="internshipForm">
+        <label for="company">Company Name</label>
+        <input type="text" id="company" required>
+
+        <label for="role">Job Role</label>
+        <input type="text" id="role" required>
+
+        <label for="link">Application Link</label>
+        <input type="url" id="link" placeholder="https://example.com">
+
+        <label for="deadline">Application Deadline</label>
+        <input type="date" id="deadline">
+
+        <button type="submit">Add Internship</button>
+    </form>
+
     <h2>My Internship Opportunities</h2>
-<p>Here I can keep track of internships I want to apply for.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Deadline</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="internshipList"></tbody>
+    </table>
+
+    <script src="script.js"></script>
 </body>
 </html>
